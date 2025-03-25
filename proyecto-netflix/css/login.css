@@ -1,6 +1,6 @@
 body{
-    background-color: #161616;
-    
+    background-image: url('../assets/images/background.jpg');
+    font-family: 'Roboto', sans-serif;
 }
 div{
     color: white;
@@ -8,5 +8,18 @@ div{
     flex-direction: column;
     padding-left: 20%;
     padding-right: 20%;
+    padding-top: 1%;
+    padding-bottom: 1%;
     align-items: center;
+    width: 10%;
+    background-color: rgba(20, 20, 20, 0.8);
+    margin: auto;
+    border-radius: 10px;
+}
+footer{
+    background-color: #161616;
+}
+#logo{
+    margin-top: 1%;
+    width: 10%;
 }
