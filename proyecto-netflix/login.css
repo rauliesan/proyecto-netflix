@@ -1,0 +1,12 @@
+body{
+    background-color: #161616;
+    
+}
+div{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding-left: 20%;
+    padding-right: 20%;
+    align-items: center;
+}
