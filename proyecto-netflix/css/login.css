@@ -1,17 +1,122 @@
-body{
+/* Fondo y fuente principal */
+body {
     background-image: url('../assets/images/background.jpg');
+    background-size: cover;
+    background-position: center;
     font-family: 'Roboto', sans-serif;
+    margin: 0;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Contenedor principal del formulario */
+div {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    background-color: rgba(20, 20, 20, 0.8);
+    border-radius: 8px;
+    width: 100%;
+    max-width: 400px;  /* Limita el ancho */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Sombra para darle profundidad */
+}
+
+/* Logo de Netflix */
+#logo {
+    width: 60%;
+    margin-bottom: 20px; /* Espacio debajo del logo */
+}
+
+/* Título de la sección */
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Estilo de los inputs */
+input {
+    padding: 12px 15px;
+    margin: 10px 0;
+    width: 100%;
+    border: 1px solid #333;
+    border-radius: 5px;
+    background-color: #333;
+    color: white;
+    font-size: 16px;
+}
+
+input:focus {
+    border-color: #e50914; /* Rojo Netflix cuando el input está en foco */
+    outline: none;
+}
+
+/* Botones de acción */
+button {
+    padding: 12px 20px;
+    margin: 10px 0;
+    width: 100%;
+    background-color: #e50914;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #f40612; /* Color de hover más brillante */
+}
+
+/* Enlace de recuperación de contraseña */
+a {
+    text-decoration: none;
+    color: #b3b3b3;
+    font-size: 14px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Recuerda la casilla */
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+/* Pie de página */
+footer {
+    background-color: #161616;
+    color: #999;
+    text-align: center;
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    font-size: 12px;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+    div {
+        padding: 20px;
+        width: 90%;
+    }
+
+    #logo {
+        width: 50%;
+    }
 }
 div{
     color: white;
     display: flex;
     flex-direction: column;
-    padding-left: 20%;
-    padding-right: 20%;
     padding-top: 1%;
     padding-bottom: 1%;
     align-items: center;
-    width: 10%;
     background-color: rgba(20, 20, 20, 0.8);
     margin: auto;
     border-radius: 10px;
