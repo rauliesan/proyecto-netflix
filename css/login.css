@@ -123,8 +123,16 @@ div{
 }
 footer{
     background-color: #161616;
+    padding: 0;
+    padding-bottom: 1%;
 }
 #logo{
     margin-top: 1%;
     width: 10%;
+}
+table {
+    width: 50%;
+}
+table td {
+    padding: 10px;
 }

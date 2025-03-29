@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix</title>
+    <link rel="stylesheet" href="css/login.css">
+    <script src="js/login.js"></script>
+</head>
+<body>
+    <img src="assets/images/logo.png" alt="" id="logo">
+    <div>
+        <h1>Iniciar sesión</h1>
+        <input type="text" id="correo" placeholder="Correo o número de móvil">
+        <input type="password" id="contraseña" placeholder="Contraseña">
+        <button onclick="iniciarSesion()">Iniciar sesión</button>
+        <p>O</p>
+        <button>Usar un código de inicio de sesión</button>
+        <a href=""><p>¿Has olvidado tu contraseña?</p></a>
+        <input type="checkbox" id="remember">
+        <label for="remember">Recordarme</label>
+        <p>¿Primera vez en Netflix? <a href="index.html">Suscríbete ya</a></p>
+    </div>
+    <footer>
+        <p>¿Alguna pregunta? Llama al 900-759-106 (gratis)</p>
+        <table border="0">
+            <tr>
+                <td>Preguntas frecuentes</td>
+                <td>Centro de ayuda</td>
+            </tr>
+            <tr>
+                <td>Términos de uso</td>
+                <td>Privacidad</td>
+            </tr>
+            <tr>
+                <td>Preferencias de cookies</td>
+                <td>Información corporativa</td>
+            </tr>
+            <tr>
+                <td>Opciones de anuncios</td>
+            </tr>
+        </table>
+        <select name="idioma" id="idioma" onchange="cambiarIdioma()">
+            <option value="es">Español</option>
+            <option value="en">Inglés</option>
+        </select>
+    </footer>
+</body>
+</html>
