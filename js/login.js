@@ -4,10 +4,10 @@ function cambiarIdioma() {
 
     if (idiomaSeleccionado === "en") {
         // Redirige a la página en inglés (ajusta la URL según sea necesario)
-        window.location.href = "pagina_en_ingles.html";
+        window.location.href = "login_en.html";
     } else {
         // Redirige a la página en español (ajusta la URL según sea necesario)
-        window.location.href = "pagina_en_espanol.html";
+        window.location.href = "login_es.html";
     }
 }
 

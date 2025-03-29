@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix</title>
+    <link rel="stylesheet" href="css/login.css">
+    <script src="js/login.js"></script>
+</head>
+<body>
+    <img src="assets/images/logo.png" alt="" id="logo">
+    <div>
+        <h1>Sign In</h1>
+        <input type="text" id="correo" placeholder="Email or mobile number">
+        <input type="password" id="contraseña" placeholder="Password">
+        <button onclick="iniciarSesion()">Sign In</button>
+        <p>Or</p>
+        <button>Use a sign-in code</button>
+        <a href=""><p>Forgot your password?</p></a>
+        <input type="checkbox" id="remember">
+        <label for="remember">Remember me</label>
+        <p>First time on Netflix? <a href="index.html">Sign up now</a></p>
+    </div>
+    <footer>
+        <p>Any questions? Call 900-759-106 (free)</p>
+        <table border="0">
+            <tr>
+                <td>FAQ</td>
+                <td>Help Center</td>
+            </tr>
+            <tr>
+                <td>Terms of Use</td>
+                <td>Privacy</td>
+            </tr>
+            <tr>
+                <td>Cookie Preferences</td>
+                <td>Corporate Information</td>
+            </tr>
+            <tr>
+                <td>Ad Options</td>
+            </tr>
+        </table>
+        <select name="idioma" id="idioma" onchange="cambiarIdioma()">
+            <option value="es">Spanish</option>
+            <option value="en" selected>English</option>
+        </select>
+    </footer>
+</body>
+</html>
