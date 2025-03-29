@@ -3,9 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Netflix</title>
+    <title>Netflix - Ver series y películas en linea</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <script src="js/index.js"></script>
 </head>
 <body>
-    
+    <header>
+        <div class="background-shadow"></div> <!-- Capa con sombra -->
+        <img src="assets/images/logo.png" alt="" id="logo">
+        <div class="header-content">  <!-- Este es el div que vamos a centrar -->
+            <h1>Películas y series <br> sin límites y <br> mucho más</h1>
+            <p>A partir de 6,99€. Cancela cuando quieras.</p>
+            <br>
+            <p>¿Quieres ver algo ya? Escribe tu dirección de correo para crear una suscripción a Netflix o reactivarla</p>
+            <input type="text" placeholder="Dirección de correo">
+            <button>Empezar ></button>
+        </div>
+    </header>
+
+    <button onclick="iniciarSesion()" id="iniciarSesion">Iniciar Sesión</button>
+    <div id="content">
+        <h1>Tendencias ahora</h1>
+    </div>
 </body>
 </html>

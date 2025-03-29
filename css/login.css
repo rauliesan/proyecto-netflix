@@ -25,10 +25,9 @@ div {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Sombra para darle profundidad */
 }
 
-/* Logo de Netflix */
-#logo {
-    width: 60%;
-    margin-bottom: 20px; /* Espacio debajo del logo */
+#logo{
+    margin-top: 1%;
+    width: 15%;
 }
 
 /* Título de la sección */
@@ -54,7 +53,6 @@ input:focus {
     outline: none;
 }
 
-/* Botones de acción */
 button {
     padding: 12px 20px;
     margin: 10px 0;
@@ -125,10 +123,6 @@ footer{
     background-color: #161616;
     padding: 0;
     padding-bottom: 1%;
-}
-#logo{
-    margin-top: 1%;
-    width: 10%;
 }
 table {
     width: 50%;
