@@ -40,7 +40,7 @@ header {
 }
 #iniciarSesion{
     margin: 10px 0;
-    background-color: #e50914;
+    background-color: #007BFF;
     border: none;
     border-radius: 5px;
     color: white;
@@ -75,7 +75,7 @@ input {
 }
 
 input:focus {
-    border-color: #e50914; /* Rojo Netflix cuando el input está en foco */
+    border-color: #007BFF; /* Azul eléctrico Ñetflix cuando el input está en foco */
     outline: none;
 }
 #content{ /* Es el div de todo el contenido para que esté separado de los bordes de la página */
@@ -86,7 +86,7 @@ button {
     padding: 12px 20px;
     margin: 10px 0;
     width: auto;
-    background-color: #e50914;
+    background-color: #007BFF;
     border: none;
     border-radius: 5px;
     color: white;
