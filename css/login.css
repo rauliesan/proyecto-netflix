@@ -49,7 +49,7 @@ input {
 }
 
 input:focus {
-    border-color: #007BFF; /* Rojo Netflix cuando el input está en foco */
+    border-color: #007BFF; /* Azul eléctrico Ñetflix cuando el input está en foco */
     outline: none;
 }
 
