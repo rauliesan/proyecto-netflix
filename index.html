@@ -4,26 +4,170 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Netflix - Ver series y películas en linea</title>
-    <link rel="stylesheet" href="/css/styles.css">
-    <script src="js/index.js"></script>
+    <link rel="icon" href="assets/images/logoN.webp" type="image/x-icon">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <header>
-        <div class="background-shadow"></div> <!-- Capa con sombra -->
-        <img src="assets/images/logo.png" alt="" id="logo">
+        <img src="assets/images/logo.png" alt="Logo Netflix" id="logo">
         <div class="header-content">  <!-- Este es el div que vamos a centrar -->
             <h1>Películas y series <br> sin límites y <br> mucho más</h1>
             <p>A partir de 6,99€. Cancela cuando quieras.</p>
             <br>
             <p>¿Quieres ver algo ya? Escribe tu dirección de correo para crear una suscripción a Netflix o reactivarla</p>
             <input type="text" placeholder="Dirección de correo">
-            <button>Empezar ></button>
+            <button>Empezar</button>
         </div>
     </header>
 
     <button onclick="iniciarSesion()" id="iniciarSesion">Iniciar Sesión</button>
-    <div id="content">
-        <h1>Tendencias ahora</h1>
-    </div>
+    
+    <section class="movies-gallery">
+        <h2 class="gallery-title">Películas y series populares</h2>
+        <div class="movies-container">
+            <div class="movie-item">
+                <img src="https://occ-0-8475-5574.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABenuhkvT0US8ggny_InvQmxD_pl9r1t0qZnMI3AKJh0zBF6H1AuUoPyFAPxv75klcJopMH0e-k35bED8Dr8NteeXT5RECGZOOrli.jpg?" alt="Sevillanas por Brooklyn">
+                <div class="movie-info">
+                    <h3>Sevillanas de Brooklyn</h3>
+                    <p>2025 | Comedia</p>
+                </div>
+            </div>
+            <div class="movie-item">
+                <img src="https://occ-0-8475-5574.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABTQjXHLPcXpNfhfY4T6hy7kpvvP_-OZNg7Q8DG1xey_yZgcKPJOqq6lTWD4XehNyzLLi4F4tgP0aR6mOBJTnzWuKl_lRXBIQRKrgSr3P-yOBkb_xBlmv-q-Ow42FdfwRuDmTnQ.jpg" alt="Ricos y mimados">
+                <div class="movie-info">
+                    <h3>Ricos y mimados</h3>
+                    <p>2021 | Comedia</p>
+                </div>
+            </div>
+            <div class="movie-item">
+                <img src="https://occ-0-8475-5574.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABYAp-Wvi6m6FUPXPAZZStp64t40_tvthH2e_B69lpXK9gUN_4bQtnt7iSdraf-i9chIjkJqTvMweqldPV8BiqF6qwcdDd2pA8HIjZZaKJS8bjnE0D4SgkfeKLwyzawy8FCSnmw.jpg" alt="Karol G">
+                <div class="movie-info">
+                    <h3>Karol G</h3>
+                    <p>2025 | Documental</p>
+                </div>
+            </div>
+            <div class="movie-item">
+                <img src="https://occ-0-8475-5574.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABVb4N86KCbN8LrOgtkMUO7lkVTpPr27fklErYgcF3vsXS96t3EKT5BvWhfNJ3PVxbJnqiyfwnLNU3JhZxv5zCta1Hh6yymZ8zj9y.jpg" alt="Mala influencia">
+                <div class="movie-info">
+                    <h3>Mala influencia</h3>
+                    <p>2025 | Drama</p>
+                </div>
+            </div>
+            <div class="movie-item">
+                <img src="https://occ-0-8475-5574.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABR02XS11eYpSSGS65L22W5z217WV1Helymsxix1pjdy-Yucjy2DkmQMVtNOpP7RxMCmcuFmMRQvoSvWsKYAgIjFG4gvRX9AUPjAlIRSHdS8j2k-1N0THi4f5np7xV7R0T-VBlQ.jpg" alt="El Eternauta">
+                <div class="movie-info">
+                    <h3>El Eternauta</h3>
+                    <p>2025 | Ciencia Ficción</p>
+                </div>
+            </div>
+            <div class="movie-item">
+                <img src="/api/placeholder/200/300" alt="Película 6">
+                <div class="movie-info">
+                    <h3>Título de película</h3>
+                    <p>2024 | Thriller</p>
+                </div>
+            </div>
+            <div class="movie-item">
+                <img src="/api/placeholder/200/300" alt="Película 7">
+                <div class="movie-info">
+                    <h3>Título de película</h3>
+                    <p>2023 | Horror</p>
+                </div>
+            </div>
+            <div class="movie-item">
+                <img src="/api/placeholder/200/300" alt="Película 8">
+                <div class="movie-info">
+                    <h3>Título de película</h3>
+                    <p>2024 | Documental</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Sección de beneficios -->
+    <section class="benefits-section">
+        <h2 class="benefits-title">Más motivos para suscribirte</h2>
+        <div class="benefits-container">
+            <div class="benefit-card">
+                <div class="benefit-icon">
+                    <i class="fas fa-tv"></i>
+                </div>
+                <h3 class="benefit-title">Disfruta en tu tele</h3>
+                <p class="benefit-text">Smart TV, Playstation, Xbox, Chromecast, Apple TV, reproductores Blu-ray y muchos más.</p>
+            </div>
+            
+            <div class="benefit-card">
+                <div class="benefit-icon">
+                    <i class="fas fa-download"></i>
+                </div>
+                <h3 class="benefit-title">Descárgate tus favoritas</h3>
+                <p class="benefit-text">Guarda tus títulos favoritos fácilmente para que siempre tengas algo para ver sin conexión.</p>
+            </div>
+            
+            <div class="benefit-card">
+                <div class="benefit-icon">
+                    <i class="fas fa-mobile-alt"></i>
+                </div>
+                <h3 class="benefit-title">Disfruta en todas partes</h3>
+                <p class="benefit-text">Ve en streaming todas las películas y series en tu móvil, tableta, ordenador y televisor.</p>
+            </div>
+            
+            <div class="benefit-card">
+                <div class="benefit-icon">
+                    <i class="fas fa-child"></i>
+                </div>
+                <h3 class="benefit-title">Crea perfiles infantiles</h3>
+                <p class="benefit-text">Deja que los niños vivan aventuras con sus personajes favoritos en un espacio diseñado exclusivamente para ellos.</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Sección de FAQ -->
+    <section class="faq-section">
+        <h2 class="faq-title">Preguntas frecuentes</h2>
+        <div class="faq-container">
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <span>¿Qué es Netflix?</span>
+                    <i class="fas fa-plus">+</i>
+                </div>
+                <div class="faq-answer">
+                    <p>Netflix es un servicio de streaming que ofrece una amplia variedad de series, películas, títulos de anime, documentales y otros contenidos premiados en miles de dispositivos conectados a internet. Puedes ver todo lo que quieras, cuando quieras, por una tarifa mensual reducida. ¡Siempre hay algo nuevo por descubrir!</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <span>¿Cuánto cuesta Netflix?</span>
+                    <i class="fas fa-plus">+</i>
+                </div>
+                <div class="faq-answer">
+                    <p>Disfruta de Netflix en tu smartphone, tablet, smart TV, ordenador o dispositivo de streaming, todo por una tarifa mensual fija que va desde los 6,99€ hasta los 15,99€. Sin cargos adicionales ni contratos.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <span>¿Dónde puedo ver Netflix?</span>
+                    <i class="fas fa-plus">+</i>
+                </div>
+                <div class="faq-answer">
+                    <p>Disfruta donde quieras y cuando quieras. Inicia sesión con tu cuenta de Netflix para disfrutar al instante de todo el contenido desde netflix.com en tu ordenador personal o en cualquier dispositivo conectado a internet que cuente con la aplicación de Netflix, como smart TV, smartphones, tablets, reproductores multimedia y consolas de juegos.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <span>¿Cómo cancelo mi suscripción?</span>
+                    <i class="fas fa-plus">+</i>
+                </div>
+                <div class="faq-answer">
+                    <p>Netflix es flexible. Sin contratos molestos ni compromisos. Puedes cancelar tu cuenta online fácilmente en dos clics. No hay cargos por cancelación, puedes iniciar o detener tu cuenta en cualquier momento.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <script src="js/index.js"></script>
 </body>
 </html>

@@ -1,67 +1,72 @@
-/* Pertenece al index.html */
+/* Estilos generales */
 body {
     background-position: center;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     margin: 0;
     height: 100vh;
     justify-content: center;
     align-items: center;
     color: white;
+    background-color: black;
 }
-.background-shadow {
-    position: fixed;  /* Lo fija a toda la pantalla */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Sombra oscura */
-    z-index: -1; /* Lo coloca detrás de todo el contenido */
-}
+
+/* Estilos del header */
 header {
-    background-image: url('../assets/images/background.jpg');
+    background-image: url("../assets/images/background.jpg");
     background-size: cover;
     height: 500px;
-    z-index: -2; /* Asegura que el header esté detrás de la sombra */
-    position: relative; /* Asegura que el z-index funcione correctamente */
+    position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Centra los elementos verticalmente */
-    align-items: center; /* Centra los elementos horizontalmente */
-    text-align: center; /* Centra el texto dentro del header-content */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     padding: 20px;
-    z-index: 1;
 }
-#logo{
+
+#logo {
     margin-top: 1%;
     width: 15%;
-    position: fixed;
+    position: absolute;
     top: 1%;
     left: 1%;
 }
-#iniciarSesion{
+
+#iniciarSesion {
     margin: 10px 0;
-    background-color: #007BFF;
+    background-color: #e50914;
     border: none;
     border-radius: 5px;
     color: white;
     font-size: 16px;
     cursor: pointer;
-    position: fixed;  /* Lo coloca de manera absoluta dentro del body */
+    position: absolute;
     top: 1%;
     right: 1%;
     width: auto;
     padding: 10px 20px;
     z-index: 1;
 }
-#header-content{
-    display: flex; /* Usamos Flexbox */
-    flex-direction: column; /* Colocamos los elementos en columna */
-    justify-content: center; /* Centra los elementos verticalmente */
-    align-items: center; /* Centra los elementos horizontalmente */
-    text-align: center; /* Centra el texto dentro del header-content */
-    height: 100%; /* Asegura que el contenido ocupe todo el alto del header */
-    padding: 20px;
+
+.header-content {
+    background-color: rgba(20, 20, 20, 0.6);
+    padding: 1px;
+    border-radius: 10px;
+    backdrop-filter: blur(2px);
 }
+
+.header-content > h1 {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.header-content > p {
+    font-size: 1.2em;
+    max-width: 800px;
+    line-height: 1.5;
+}
+
 /* Estilo de los inputs */
 input {
     padding: 12px 15px;
@@ -75,21 +80,232 @@ input {
 }
 
 input:focus {
-    border-color: #007BFF; /* Azul eléctrico Ñetflix cuando el input está en foco */
+    border-color: #e50914;
     outline: none;
 }
-#content{ /* Es el div de todo el contenido para que esté separado de los bordes de la página */
-    margin-left: 5%;
-    margin-right: 5%;
-}
+
 button {
     padding: 12px 20px;
-    margin: 10px 0;
+    margin: 10px 0 0 10px;
     width: auto;
-    background-color: #007BFF;
+    background-color: #e50914;
     border: none;
     border-radius: 5px;
     color: white;
     font-size: 16px;
     cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+/* Galería de películas (reemplaza al carrusel) */
+.movies-gallery {
+    padding: 50px 20px;
+    background-color: #141414;
+}
+
+.gallery-title {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 40px;
+    color: white;
+}
+
+.movies-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.movie-item {
+    position: relative;
+    height: 300px;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.movie-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.movie-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+    padding: 20px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.4s ease;
+}
+
+.movie-info h3 {
+    margin: 0 0 5px 0;
+    font-size: 1.2em;
+}
+
+.movie-info p {
+    margin: 0;
+    font-size: 0.9em;
+    color: #ccc;
+}
+
+/* Animaciones al pasar el ratón */
+.movie-item:hover {
+    transform: scale(1.05);
+    z-index: 2;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.movie-item:hover img {
+    transform: scale(1.1);
+    filter: brightness(0.7);
+}
+
+.movie-item:hover .movie-info {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Sección de beneficios */
+.benefits-section {
+    padding: 50px 20px;
+    background-color: black;
+}
+
+.benefits-title {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 40px;
+}
+
+.benefits-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.benefit-card {
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    padding: 30px;
+    width: 220px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.benefit-card:hover {
+    transform: translateY(-10px);
+}
+
+.benefit-icon {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: #e50914;
+}
+
+.benefit-title {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.benefit-text {
+    font-size: 0.9em;
+    color: #ececec;
+}
+
+/* FAQ Section */
+.faq-section {
+    padding: 50px 20px;
+    background-color: #0a0a0a;
+}
+
+.faq-title {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 40px;
+}
+
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    margin-bottom: 10px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.faq-question {
+    background-color: #1e1e1e;
+    color: white;
+    padding: 15px 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s;
+}
+
+.faq-question:hover {
+    background-color: #333;
+}
+
+.faq-answer {
+    background-color: #333;
+    color: #ececec;
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, padding 0.5s ease;
+}
+
+.faq-answer.show {
+    padding: 20px;
+    max-height: 300px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .movies-container {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+    
+    .header-content > h1 {
+        font-size: 1.5em;
+    }
+    
+    .header-content > p {
+        font-size: 1em;
+    }
+    
+    #logo {
+        width: 30%;
+    }
+    
+    .benefits-container {
+        flex-direction: column;
+        align-items: center;
+    }
 }
