@@ -3,22 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Netflix</title>
+    <title>Netflix - Regístrate</title>
     <link rel="icon" href="static/images/logoN.webp" type="image/x-icon">
     <link rel="stylesheet" href="static/css/login.css">
 </head>
 <body>
-    <img src="static/images/logo.png" alt="logo" id="logo">
+    <img src="static/images/logo.png" alt="Netflix Logo" id="logo">
+    
     <div>
-        <h1>Iniciar sesión</h1>
-        <input type="text" id="correo" placeholder="Nombre de usuario">
-        <input type="password" id="contraseña" placeholder="Contraseña">
-        <button onclick="iniciarSesion()">Iniciar sesión</button>
-        <p>O</p>
-        <button onclick="window.location.href='no_disponible.html'">Usar un código de inicio de sesión</button>
-        <a href="no_disponible.html"><p>¿Has olvidado tu contraseña?</p></a>
-        <p>¿Primera vez en Netflix? <a href="sign-up_es.html">Crear cuenta</a></p>
+        <h1>Crear cuenta</h1>
+        <input type="text" id="usuario" placeholder="Nombre de usuario">
+        <input type="password" id="contrasenia" placeholder="Contraseña">
+        
+        <input type="checkbox" id="privacy" required>
+        <p>
+            Acepto los <a href="no_disponible.html">Términos de uso</a> y la <a href="no_disponible.html">Declaración de privacidad</a>.
+        </p>
+        
+        <button onclick="registrarUsuario()">Registrarse</button>
+        
+        <p>¿Ya tienes una cuenta? <a href="login_es.html">Iniciar sesión</a></p>
     </div>
+
     <footer>
         <p>¿Alguna pregunta? Llama al 900-759-106 (gratis)</p>
         <table border="0">
@@ -43,7 +49,6 @@
             <option value="en">Inglés</option>
         </select>
     </footer>
-    
-    <script src="static/js/login.js"></script>
+    <script src="static/js/sign-up.js"></script>
 </body>
 </html>

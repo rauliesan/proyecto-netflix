@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix - Sign Up</title>
+    <link rel="icon" href="static/images/logoN.webp" type="image/x-icon">
+    <link rel="stylesheet" href="static/css/login.css">
+</head>
+<body>
+    <img src="static/images/logo.png" alt="Netflix Logo" id="logo">
+    
+    <div>
+        <h1>Create Account</h1>
+        <input type="text" id="usuario" placeholder="Username">
+        <input type="password" id="contrasenia" placeholder="Password">
+        
+        <input type="checkbox" id="privacy" required>
+        <p>
+            I accept the <a href="no_disponible.html">Terms of Use</a> and the <a href="no_disponible.html">Privacy Statement</a>.
+        </p>
+        
+        <button onclick="registrarUsuario()">Sign Up</button>
+        
+        <p>Already have an account? <a href="login_en.html">Log In</a></p>
+    </div>
+
+    <footer>
+        <p>Questions? Call 900-759-106 (toll-free)</p>
+        <table border="0">
+            <tr>
+                <td>FAQ</td>
+                <td>Help Center</td>
+            </tr>
+            <tr>
+                <td>Terms of Use</td>
+                <td>Privacy</td>
+            </tr>
+            <tr>
+                <td>Cookie Preferences</td>
+                <td>Corporate Information</td>
+            </tr>
+            <tr>
+                <td>Ad Choices</td>
+            </tr>
+        </table>
+        <select name="language" id="idioma" onchange="cambiarIdioma()">
+            <option value="es">Español</option>
+            <option value="en" selected>English</option>
+        </select>
+    </footer>
+    <script src="static/js/sign-up.js"></script>
+</body>
+</html>

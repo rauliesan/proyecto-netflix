@@ -2,6 +2,9 @@ function iniciarSesion() {
     window.location.href = "login_es.html";
 }
 
+function registrarse(){
+    window.location.href = "sign-up_es.html";
+}
 
 // JavaScript para los FAQ
 function toggleFAQ(element) {

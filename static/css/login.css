@@ -1,6 +1,6 @@
 /* Fondo y fuente principal */
 body {
-    background-image: url('../assets/images/background.jpg');
+    background-image: url('../images/background.jpg');
     background-size: cover;
     background-position: center;
     font-family: 'Roboto', sans-serif;

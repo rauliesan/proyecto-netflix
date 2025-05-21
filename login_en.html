@@ -4,22 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Netflix</title>
-    <link rel="icon" href="assets/images/logoN.webp" type="image/x-icon">
-    <link rel="stylesheet" href="css/login.css">
+    <link rel="icon" href="static/images/logoN.webp" type="image/x-icon">
+    <link rel="stylesheet" href="static/css/login.css">
 </head>
 <body>
-    <img src="assets/images/logo.png" alt="" id="logo">
+    <img src="static/images/logo.png" alt="logo" id="logo">
     <div>
         <h1>Sign In</h1>
-        <input type="text" id="correo" placeholder="Email or mobile number">
+        <input type="text" id="correo" placeholder="Username">
         <input type="password" id="contraseña" placeholder="Password">
         <button onclick="iniciarSesion()">Sign In</button>
         <p>Or</p>
-        <button>Use a sign-in code</button>
-        <a href=""><p>Forgot your password?</p></a>
-        <input type="checkbox" id="remember">
-        <label for="remember">Remember me</label>
-        <p>First time on Netflix? <a href="index.html">Sign up now</a></p>
+        <button onclick="window.location.href =  'no_disponible.html'">Use a sign-in code</button>
+        <a href="no_disponible.html"><p>Forgot your password?</p></a>
+        <p>First time on Netflix? <a href="sign-up_en.html">Sign up now</a></p>
     </div>
     <footer>
         <p>Any questions? Call 900-759-106 (free)</p>
@@ -46,6 +44,6 @@
         </select>
     </footer>
     
-    <script src="js/login.js"></script>
+    <script src="static/js/login.js"></script>
 </body>
 </html>

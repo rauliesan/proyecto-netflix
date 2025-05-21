@@ -13,14 +13,20 @@ function cambiarIdioma() {
 
 // Función para manejar el inicio de sesión
 function iniciarSesion(){
-    var usuario = document.getElementById("correo").value;
-    var contraseña = document.getElementById("contraseña").value;
+    let usuario = document.getElementById("correo").value;
+    let contrasenia = document.getElementById("contraseña").value;
 
-    if (usuario === "usuario" && contraseña === "usuario") {
-        alert("Inicio de sesión exitoso. Bienvenido, usuario.");
-        // Redirige a la página principal después de un inicio de sesión exitoso (ajustar la URL)
-        window.location.href = "index.html";
-    } else {
-        alert("Usuario o contraseña incorrectos.");
+    if(!usuario || !contrasenia){
+        alert("Por favor, completa los campos.");
+        return;
     }
+
+    fetch('http://127.0.0.1:8000/iniciar_sesion/?nombre='+usuario +'&contrasenia='+contrasenia)
+    .then(response => {
+        if(response.ok){
+            window.location.href = "index.html";
+        } else{
+            alert("Error: Usuario o Contraseña incorrecta.");
+        }
+    })
 }

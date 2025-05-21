@@ -4,22 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Netflix - Ver series y películas en linea</title>
-    <link rel="icon" href="assets/images/logoN.webp" type="image/x-icon">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="static/images/logoN.webp" type="image/x-icon">
+    <link rel="stylesheet" href="static/css/styles.css">
 </head>
 <body>
     <header>
-        <img src="assets/images/logo.png" alt="Logo Netflix" id="logo">
+        <img src="static/images/logo.png" alt="Logo Netflix" id="logo">
         <div class="header-content">  <!-- Este es el div que vamos a centrar -->
             <h1>Películas y series <br> sin límites y <br> mucho más</h1>
             <p>A partir de 6,99€. Cancela cuando quieras.</p>
             <br>
             <p>¿Quieres ver algo ya? Escribe tu dirección de correo para crear una suscripción a Netflix o reactivarla</p>
             <input type="text" placeholder="Dirección de correo">
-            <button>Empezar</button>
+            <button onclick="window.location.href = 'no_disponible.html'">Empezar</button>
         </div>
     </header>
-
+    <button onclick="registrarse()" id="registrarse">Registrarse</button>
     <button onclick="iniciarSesion()" id="iniciarSesion">Iniciar Sesión</button>
     
     <section class="movies-gallery">
@@ -58,27 +58,6 @@
                 <div class="movie-info">
                     <h3>El Eternauta</h3>
                     <p>2025 | Ciencia Ficción</p>
-                </div>
-            </div>
-            <div class="movie-item">
-                <img src="/api/placeholder/200/300" alt="Película 6">
-                <div class="movie-info">
-                    <h3>Título de película</h3>
-                    <p>2024 | Thriller</p>
-                </div>
-            </div>
-            <div class="movie-item">
-                <img src="/api/placeholder/200/300" alt="Película 7">
-                <div class="movie-info">
-                    <h3>Título de película</h3>
-                    <p>2023 | Horror</p>
-                </div>
-            </div>
-            <div class="movie-item">
-                <img src="/api/placeholder/200/300" alt="Película 8">
-                <div class="movie-info">
-                    <h3>Título de película</h3>
-                    <p>2024 | Documental</p>
                 </div>
             </div>
         </div>
@@ -168,6 +147,6 @@
         </div>
     </section>
     
-    <script src="js/index.js"></script>
+    <script src="static/js/index.js"></script>
 </body>
 </html>
