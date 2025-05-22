@@ -1,0 +1,358 @@
+/* Basic Reset & General Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color: #000; /* Fondo negro general */
+    color: #fff;
+    overflow-x: hidden; /* Evitar scroll horizontal */
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+button {
+    cursor: pointer;
+    font-family: inherit;
+}
+
+/* Header */
+header {
+    background-color: #000; /* Fondo negro sólido para el header */
+    padding: 15px 4%; /* Padding responsivo */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1800px; /* Límite de ancho opcional */
+    margin: 0 auto;
+}
+
+.netflix-logo {
+    height: 30px; /* Ajusta según sea necesario */
+    width: auto;
+}
+
+.main-nav a {
+    margin: 0 15px;
+    font-size: 0.9em;
+    color: #e5e5e5;
+}
+
+.main-nav a:hover {
+    color: #b3b3b3;
+}
+
+.login-button {
+    background-color: #e50914; /* Rojo Netflix */
+    color: white;
+    border: none;
+    padding: 8px 17px;
+    border-radius: 3px;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+.login-button:hover {
+    background-color: #f40612;
+}
+
+/* Hero Section */
+.hero-section {
+    padding-top: 70px; /* Espacio para el header fijo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 85vh; /* Altura mínima para centrar */
+    padding-bottom: 40px;
+}
+
+.video-wrapper {
+    position: relative; /* Para posicionar hero-content absolutamente */
+    width: 90%; /* Ancho del contenedor del video */
+    max-width: 1280px; /* Máximo ancho del video */
+    margin: 0 auto;
+}
+
+.video-background-container {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%; /* Aspect ratio 16:9 */
+    background-color: #181818; /* Color de fondo mientras carga el video */
+    border-radius: 10px; /* Bordes redondeados */
+    overflow: hidden; /* Para que el video respete los bordes redondeados */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+#hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cubre el contenedor manteniendo el aspect ratio */
+}
+
+/* Custom Video Controls (simulación básica) */
+.custom-video-controls {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    gap: 10px;
+    background-color: rgba(0,0,0,0.5);
+    padding: 8px 12px;
+    border-radius: 5px;
+}
+
+.custom-video-controls button {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.2em; /* Tamaño de los iconos */
+    padding: 5px;
+}
+.custom-video-controls button:hover {
+    color: #ccc;
+}
+#playback-speed-btn {
+    font-size: 0.9em; /* Más pequeño para el texto "1x" */
+    font-weight: bold;
+    padding-top: 7px; /* Ajuste vertical */
+}
+
+
+/* Hero Content (superpuesto al video) */
+.hero-content {
+    position: absolute;
+    bottom: 10%; /* Posición desde abajo del video-wrapper */
+    left: 5%;   /* Posición desde la izquierda del video-wrapper */
+    color: #fff;
+    max-width: 450px; /* Ancho máximo del contenido de texto */
+    text-shadow: 0 2px 10px rgba(0,0,0,0.7);
+}
+
+.content-identifier {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.content-identifier .netflix-n {
+    color: #e50914;
+    font-weight: bold;
+    font-size: 1.5em;
+    margin-right: 5px;
+    line-height: 1;
+}
+
+.title-logo-img { /* Si usas una imagen para el logo del título */
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.title-logo-text { /* Si usas texto para el logo */
+    font-size: 2.8em; /* Tamaño de "KAROL G" */
+    font-weight: bold;
+    line-height: 1.1;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+}
+
+.title-logo-text .title-subtitle {
+    display: block; /* Pone "MAÑANA FUE MUY BONITO" debajo */
+    font-size: 0.5em; /* Más pequeño */
+    font-weight: normal; /* O un poco menos bold */
+    letter-spacing: 1px;
+    margin-top: 5px;
+}
+
+
+.email-form {
+    display: flex;
+    margin-bottom: 10px;
+    height: 50px; /* Altura del input y botón */
+}
+
+.email-form input[type="email"] {
+    flex-grow: 1;
+    padding: 10px 15px;
+    border: 1px solid #555;
+    background-color: rgba(0,0,0,0.6);
+    color: #fff;
+    font-size: 1em;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    border-right: none; /* Para unión con el botón */
+}
+.email-form input[type="email"]::placeholder {
+    color: #8c8c8c;
+}
+
+.subscribe-button {
+    background-color: #e50914;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    font-size: 1.1em;
+    font-weight: bold;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    white-space: nowrap; /* Evita que el texto se rompa */
+}
+.subscribe-button:hover {
+    background-color: #f40612;
+}
+
+.subscribe-info {
+    font-size: 0.9em;
+    color: #ccc;
+}
+
+/* Title Details Section */
+.title-details-section {
+    padding: 30px 5%; /* Padding responsivo */
+    display: flex;
+    justify-content: center; /* Centra el contenido */
+}
+
+.details-content {
+    background-color: rgba(20, 20, 20, 0.9); /* Fondo semitransparente */
+    padding: 30px;
+    border-radius: 8px;
+    max-width: 900px; /* Ancho máximo del contenedor de detalles */
+    width: 90%; /* Ajusta según el video-wrapper */
+    margin: 0 auto; /* Centrar */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.details-content h2 {
+    font-size: 1.8em;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.metadata {
+    margin-bottom: 15px;
+    font-size: 0.9em;
+    color: #a0a0a0;
+}
+
+.metadata span {
+    margin-right: 15px;
+}
+
+.metadata .maturity-rating {
+    border: 1px solid #777;
+    padding: 2px 6px;
+    border-radius: 3px;
+    color: #ccc;
+}
+
+.synopsis {
+    font-size: 1em;
+    line-height: 1.5;
+    margin-bottom: 15px;
+    color: #dcdcdc;
+}
+
+.cast-info {
+    font-size: 0.9em;
+    color: #a0a0a0;
+}
+
+.cast-info strong {
+    color: #777; /* Como en el ejemplo de Netflix */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .main-nav {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .main-nav a {
+        margin: 0 10px 0 0;
+    }
+    .user-actions {
+        align-self: flex-start; /* O center/flex-end según diseño */
+    }
+
+    .hero-section {
+        padding-top: 120px; /* Más espacio para header expandido */
+        min-height: 70vh;
+    }
+
+    .video-wrapper {
+        width: 95%;
+    }
+
+    .hero-content {
+        bottom: 5%;
+        left: 3%;
+        max-width: 90%; /* Ocupar más ancho en móviles */
+    }
+
+    .title-logo-text {
+        font-size: 2em;
+    }
+    .title-logo-text .title-subtitle {
+        font-size: 0.6em;
+    }
+
+    .email-form {
+        flex-direction: column;
+        height: auto;
+        gap: 10px;
+    }
+    .email-form input[type="email"],
+    .subscribe-button {
+        width: 100%;
+        box-sizing: border-box;
+        border-radius: 3px; /* Aplicar a ambos en móvil */
+        font-size: 1em;
+    }
+    .email-form input[type="email"] {
+        height: 45px;
+    }
+    .subscribe-button {
+        padding: 12px 20px;
+    }
+
+    .details-content {
+        width: 95%;
+        padding: 20px;
+    }
+    .details-content h2 {
+        font-size: 1.5em;
+    }
+
+    .custom-video-controls {
+        bottom: 10px;
+        right: 10px;
+        padding: 5px 8px;
+        gap: 5px;
+    }
+    .custom-video-controls button {
+        font-size: 1em;
+    }
+    #playback-speed-btn {
+        font-size: 0.8em;
+    }
+}

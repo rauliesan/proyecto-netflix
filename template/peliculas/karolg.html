@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KAROL G: Mañana fue muy bonito - Netflix</title>
+    <link rel="stylesheet" href="../../static/css/peliculas.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Favicon de Netflix (opcional) -->
+    <link rel="icon" href="https://assets.nflxext.com/us/ffe/siteui/common/icons/nficon2016.ico">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="Netflix Logo" class="netflix-logo">
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="video-wrapper">
+                <div class="video-background-container">
+                    <!-- Reemplaza 'YOUR_VIDEO.mp4' con la URL o ruta de tu video -->
+                    <video autoplay muted loop poster="https://occ-0-8472-5574.1.nflxso.net/so/soa2/898/1907223120215984641.mp4?v=1&e=1747980907&t=dlTw2IDZByaEt_Uv6cnRZhluWdI" id="hero-video">
+                        <source src="YOUR_VIDEO.mp4" type="video/mp4">
+                        Tu navegador no soporta el tag de video.
+                    </video>
+                    <!-- Controles de video simulados -->
+                    <div class="custom-video-controls">
+                        <button id="play-pause-btn"><i class="fas fa-pause"></i></button>
+                        <button id="volume-btn"><i class="fas fa-volume-up"></i></button>
+                        <!-- <input type="range" id="volume-slider" min="0" max="1" step="0.1" value="1"> -->
+                        <button id="playback-speed-btn">1x</button> <!-- Simplificado, 4x era en la imagen -->
+                        <button id="fullscreen-btn"><i class="fas fa-expand"></i></button>
+                        <button id="captions-btn"><i class="fas fa-comment-dots"></i></button>
+                    </div>
+                </div>
+
+                <div class="hero-content">
+                    <div class="content-identifier">
+                        <span class="netflix-n">N</span> PELÍCULA
+                    </div>
+                    <!-- Reemplaza con la imagen del logo del título si la tienes -->
+                    <!-- <img src="URL_DEL_LOGO_KAROL_G.png" alt="KAROL G MAÑANA FUE MUY BONITO Logo" class="title-logo-img"> -->
+                    <h1 class="title-logo-text">
+                        KAROL G <span class="title-subtitle">MAÑANA FUE<br>MUY BONITO</span>
+                    </h1>
+
+                    <form class="email-form">
+                        <input type="email" placeholder="Dirección de correo" required>
+                        <button type="submit" class="subscribe-button">Suscribirse ahora</button>
+                    </form>
+                    <p class="subscribe-info">Entretenimiento sin fin a partir de 6,99 €</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="title-details-section">
+            <div class="details-content">
+                <h2>Karol G: Mañana fue muy bonito</h2>
+                <div class="metadata">
+                    <span>2025</span>
+                    <span class="maturity-rating">12+</span>
+                    <span>Documental</span>
+                </div>
+                <p class="synopsis">
+                    Karol G revela los secretos de su carrera en este repaso íntimo a su vida mientras se enfrenta a una gira por estadios, el amor, la salud y la búsqueda de la grandeza.
+                </p>
+                <p class="cast-info">
+                    <strong>Protagonizada por:</strong> Karol G
+                </p>
+            </div>
+        </section>
+    </main>
+    <script src="../../static/js/peliculas.js"></script>
+</body>
+</html>
