@@ -29,4 +29,8 @@ function registrarUsuario(event){
             alert('Error en la creación de usuario.');
         }
     })
+    .catch(error => {
+        console.error("No se pudo conectar con la base de datos:", error);
+        alert("No se pudo conectar con la base de datos.");
+    });
 }
