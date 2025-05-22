@@ -11,9 +11,12 @@
     <img src="../static/images/logo.png" alt="logo" id="logo">
     <div>
         <h1>Iniciar sesión</h1>
-        <input type="text" id="correo" placeholder="Nombre de usuario">
-        <input type="password" id="contraseña" placeholder="Contraseña">
-        <button onclick="iniciarSesion()">Iniciar sesión</button>
+        <form id="formInicioSesion">
+            <input type="text" id="correo" placeholder="Nombre de usuario" required>
+            <input type="password" id="contraseña" placeholder="Contraseña" required>
+            <button>Iniciar sesión</button>
+        </form>
+        
         <p>O</p>
         <button onclick="window.location.href='no_disponible.html'">Usar un código de inicio de sesión</button>
         <a href="no_disponible.html"><p>¿Has olvidado tu contraseña?</p></a>

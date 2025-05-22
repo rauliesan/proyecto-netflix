@@ -12,15 +12,15 @@
     
     <div>
         <h1>Crear cuenta</h1>
-        <input type="text" id="usuario" placeholder="Nombre de usuario">
-        <input type="password" id="contrasenia" placeholder="Contraseña">
-        
-        <input type="checkbox" id="privacy" required>
-        <p>
-            Acepto los <a href="no_disponible.html">Términos de uso</a> y la <a href="no_disponible.html">Declaración de privacidad</a>.
-        </p>
-        
-        <button onclick="registrarUsuario()">Registrarse</button>
+        <form id="formRegistrarUsuario">
+            <input type="text" id="usuario" placeholder="Nombre de usuario" required>
+            <input type="password" id="contrasenia" placeholder="Contraseña" required>
+            
+            <input type="checkbox" id="privacy" required>
+            <p>Acepto los <a href="no_disponible.html">Términos de uso</a> y la <a href="no_disponible.html">Declaración de privacidad</a>.</p>
+            
+            <button>Registrarse</button>
+        </form>
         
         <p>¿Ya tienes una cuenta? <a href="login_es.html">Iniciar sesión</a></p>
     </div>

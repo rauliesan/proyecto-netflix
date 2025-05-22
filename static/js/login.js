@@ -12,14 +12,11 @@ function cambiarIdioma() {
 }
 
 // Función para manejar el inicio de sesión
+document.getElementById('formInicioSesion').addEventListener('submit', iniciarSesion);
 function iniciarSesion(){
     let usuario = document.getElementById("correo").value;
     let contrasenia = document.getElementById("contraseña").value;
 
-    if(!usuario || !contrasenia){
-        alert("Por favor, completa los campos.");
-        return;
-    }
 
     fetch('http://127.0.0.1:8000/iniciar_sesion/?nombre='+usuario +'&contrasenia='+contrasenia)
     .then(response => {

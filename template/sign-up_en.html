@@ -12,15 +12,16 @@
     
     <div>
         <h1>Create Account</h1>
-        <input type="text" id="usuario" placeholder="Username">
-        <input type="password" id="contrasenia" placeholder="Password">
+        <form id="formRegistrarUsuario">
+            <input type="text" id="usuario" placeholder="Username" required>
+            <input type="password" id="contrasenia" placeholder="Password" required>
+            
+            <input type="checkbox" id="privacy" required>
+            <p>I accept the <a href="no_disponible.html">Terms of Use</a> and the <a href="no_disponible.html">Privacy Statement</a>.</p>
+            
+            <button>Sign Up</button>
+        </form>
         
-        <input type="checkbox" id="privacy" required>
-        <p>
-            I accept the <a href="no_disponible.html">Terms of Use</a> and the <a href="no_disponible.html">Privacy Statement</a>.
-        </p>
-        
-        <button onclick="registrarUsuario()">Sign Up</button>
         
         <p>Already have an account? <a href="login_en.html">Log In</a></p>
     </div>
