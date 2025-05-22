@@ -43,7 +43,3 @@ def iniciar_sesion(nombre: str, contrasenia: str, db: Session = Depends(get_db))
         return usuario
     else:
         raise HTTPException(status_code=400, detail="Error con la base de datos")
-
-@app.get("/usuarios/")
-def listar_usuarios(db: Session = Depends(get_db)):
-    return db.query(Usuario).all()
