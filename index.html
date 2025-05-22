@@ -10,7 +10,14 @@
 <body>
     <header>
         <img src="static/images/logo.png" alt="Logo Netflix" id="logo">
-        <div class="header-content">  <!-- Este es el div que vamos a centrar -->
+        
+        <!-- Contenedor para los botones -->
+        <div class="header-buttons">
+            <button onclick="registrarse()" id="registrarse">Registrarse</button>
+            <button onclick="iniciarSesion()" id="iniciarSesion">Iniciar Sesión</button>
+        </div>
+        
+        <div class="header-content">
             <h1>Películas y series <br> sin límites y <br> mucho más</h1>
             <p>A partir de 6,99€. Cancela cuando quieras.</p>
             <br>
@@ -19,8 +26,6 @@
             <button onclick="window.location.href = 'template/no_disponible.html'">Empezar</button>
         </div>
     </header>
-    <button onclick="registrarse()" id="registrarse">Registrarse</button>
-    <button onclick="iniciarSesion()" id="iniciarSesion">Iniciar Sesión</button>
     
     <section class="movies-gallery">
         <h2 class="gallery-title">Películas y series populares</h2>

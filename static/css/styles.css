@@ -32,37 +32,40 @@ header {
     left: 1%;
 }
 
-#iniciarSesion {
-    margin: 10px 0;
-    background-color: #e50914;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
+/* Contenedor para los botones del header */
+.header-buttons {
     position: absolute;
-    top: 1%;
-    right: 1%;
-    width: auto;
-    padding: 10px 20px;
+    top: 4%;
+    right: 2%;
+    display: flex;
+    gap: 10px;
     z-index: 1;
 }
 
-#registrarse {
-    margin: 10px 0;
+#iniciarSesion {
+    margin: 0;
     background-color: #e50914;
     border: none;
     border-radius: 5px;
     color: white;
     font-size: 16px;
     cursor: pointer;
-    position: absolute;
-    top: 1%;
-    right: 10%;
-    width: auto;
     padding: 10px 20px;
-    z-index: 1;
+    white-space: nowrap;
 }
+
+#registrarse {
+    margin: 0;
+    background-color: #e50914;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 10px 20px;
+    white-space: nowrap;
+}
+
 
 .header-content {
     background-color: rgba(20, 20, 20, 0.6);
