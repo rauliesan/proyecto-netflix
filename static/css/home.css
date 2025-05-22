@@ -12,7 +12,7 @@ body {
 
 /* Estilos del header */
 header {
-    background-image: url("/api/placeholder/1920/1080");
+    background-image: url("static/images/background.jpg");
     background-size: cover;
     height: 500px;
     position: relative;
@@ -22,6 +22,46 @@ header {
     align-items: center;
     text-align: center;
     padding: 20px;
+}
+
+#logo {
+    margin-top: 1%;
+    width: 15%;
+    position: absolute;
+    top: 1%;
+    left: 1%;
+}
+
+#iniciarSesion {
+    margin: 10px 0;
+    background-color: #e50914;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    position: absolute;
+    top: 1%;
+    right: 1%;
+    width: auto;
+    padding: 10px 20px;
+    z-index: 1;
+}
+
+#registrarse {
+    margin: 10px 0;
+    background-color: #e50914;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    position: absolute;
+    top: 1%;
+    right: 10%;
+    width: auto;
+    padding: 10px 20px;
+    z-index: 1;
 }
 
 #logo {
@@ -84,7 +124,43 @@ header {
     margin-bottom: 30px;
 }
 
-/* Botón de reproducir principal */
+/* Estilo de los inputs */
+input {
+    padding: 12px 15px;
+    margin: 10px 0;
+    width: auto;
+    border: 1px solid #333;
+    border-radius: 5px;
+    background-color: #333;
+    color: white;
+    font-size: 16px;
+}
+
+input:focus {
+    border-color: #e50914;
+    outline: none;
+}
+
+button {
+    padding: 12px 20px;
+    margin: 10px 0 0 10px;
+    width: auto;
+    background-color: #e50914;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(0.95);
+}
 .play-button {
     padding: 15px 30px;
     background-color: white;
@@ -127,9 +203,13 @@ nav {
 }
 
 .nav-logo {
-    color: #e50914;
-    font-size: 24px;
-    font-weight: bold;
+    height: 40px;
+    width: auto;
+    transition: transform 0.3s ease;
+}
+
+.nav-logo:hover {
+    transform: scale(1.05);
 }
 
 .nav-links {
@@ -161,10 +241,17 @@ nav {
     background-color: #e50914;
 }
 
-/* Galería de películas por categorías */
-.movies-section {
-    padding: 50px 50px;
+/* Galería de películas (reemplaza al carrusel) */
+.movies-gallery {
+    padding: 50px 20px;
     background-color: #141414;
+}
+
+.gallery-title {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 40px;
+    color: white;
 }
 
 .category-title {
@@ -179,21 +266,15 @@ nav {
 }
 
 .movies-container {
-    display: flex;
-    gap: 15px;
-    overflow-x: auto;
-    padding-bottom: 10px;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-}
-
-.movies-container::-webkit-scrollbar {
-    display: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .movie-item {
     position: relative;
-    min-width: 200px;
     height: 300px;
     border-radius: 4px;
     overflow: hidden;
@@ -281,17 +362,8 @@ footer {
 
 /* Responsive */
 @media (max-width: 768px) {
-    nav {
-        padding: 15px 20px;
-    }
-    
-    .movies-section {
-        padding: 30px 20px;
-    }
-    
-    .movie-item {
-        min-width: 150px;
-        height: 225px;
+    .movies-container {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     }
     
     .header-content > h1 {
@@ -302,7 +374,24 @@ footer {
         font-size: 1em;
     }
     
+    #logo {
+        width: 30%;
+    }
+    
+    .benefits-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    nav {
+        padding: 15px 20px;
+    }
+    
     .nav-links {
         display: none;
+    }
+    
+    .nav-logo {
+        height: 30px;
     }
 }
