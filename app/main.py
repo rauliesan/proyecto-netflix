@@ -10,10 +10,10 @@ app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # Permite cualquier origen. Cambia a ["http://localhost:port"] en producción.
+    allow_origins=["*"],
     allow_credentials=True,
-    allow_methods=["*"],  # Permite cualquier método HTTP.
-    allow_headers=["*"],  # Permite cualquier cabecera.
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 
 
@@ -27,10 +27,6 @@ def get_db():
         yield db
     finally:
         db.close()
-
-@app.get("/")
-def read_root():
-    return {"message": "API de Netflix funcionando"}
 
 @app.post("/crear_usuario/")
 def crear_usuario(nombre: str, contrasenia: str, db: Session = Depends(get_db)):
