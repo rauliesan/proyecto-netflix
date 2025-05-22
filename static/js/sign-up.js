@@ -12,10 +12,11 @@ function cambiarIdioma() {
 }
 
 document.getElementById('formRegistrarUsuario').addEventListener('submit', registrarUsuario);
-function registrarUsuario(){
+function registrarUsuario(event){
     let usuario = document.getElementById('usuario').value;
     let contrasenia = document.getElementById('contrasenia').value;
 
+    event.preventDefault();
 
     fetch('http://127.0.0.1:8000/crear_usuario/?nombre='+usuario+'&contrasenia='+contrasenia, {
         method: "POST"
