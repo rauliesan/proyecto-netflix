@@ -24,7 +24,7 @@ function iniciarSesion(){
     fetch('http://127.0.0.1:8000/iniciar_sesion/?nombre='+usuario +'&contrasenia='+contrasenia)
     .then(response => {
         if(response.ok){
-            window.location.href = "index.html";
+            window.location.href = "home.html";
         } else{
             alert("Error: Usuario o Contraseña incorrecta.");
         }

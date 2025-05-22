@@ -1,9 +1,9 @@
 function iniciarSesion() {
-    window.location.href = "login_es.html";
+    window.location.href = "template/login_es.html";
 }
 
 function registrarse(){
-    window.location.href = "sign-up_es.html";
+    window.location.href = "template/sign-up_es.html";
 }
 
 // JavaScript para los FAQ
