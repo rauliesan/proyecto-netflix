@@ -1,14 +1,19 @@
-# Proyecto Netflix API
+# Proyecto Netflix
 
-Este proyecto es una API construida con **FastAPI** y **SQLAlchemy** que simula un sistema de autenticación de usuarios para una aplicación estilo Netflix. Los usuarios pueden registrarse, iniciar sesión y consultar la lista de usuarios.
+Este proyecto es un clon básico de Netflix, desarrollado con tecnologías frontend y backend. Incluye funcionalidades de **registro**, **inicio de sesión**, **selección de idioma**, y navegación básica a través de una interfaz moderna y responsiva.
 
-## Tecnologías usadas
 
-- **FastAPI**: Framework moderno y rápido para la construcción de APIs en Python.
-- **SQLAlchemy**: ORM para la base de datos.
-- **MySQL**: Base de datos relacional.
-- **Uvicorn**: Servidor ASGI para correr FastAPI.
-- **Pymysql**: Conector para MySQL desde Python.
+## 🧰 Tecnologías utilizadas
+
+### 🖥️ Frontend
+- **HTML5**  
+- **CSS3**  
+- **JavaScript**  
+
+### ⚙️ Backend 
+- **FastAPI** – Framework web moderno y rápido  
+- **SQLAlchemy** – ORM para gestionar modelos y base de datos  
+- **MySQL** – Base de datos relacional
 
 
 ## Instalar dependencias
