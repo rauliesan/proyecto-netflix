@@ -25,14 +25,6 @@ document.querySelector('.info-button').addEventListener('click', () => {
     alert('Mostrando más información sobre Stranger Things...');
 });
 
-// Funcionalidad adicional para navegación
-document.querySelectorAll('.nav-links a').forEach(link => {
-    link.addEventListener('click', (e) => {
-        e.preventDefault();
-        const section = e.target.textContent;
-        alert(`Navegando a: ${section}`);
-    });
-});
 
 // Efecto de desplazamiento suave al hacer scroll
 window.addEventListener('scroll', () => {
@@ -59,6 +51,25 @@ if (window.innerWidth <= 768) {
         });
     });
 }
+
+// Desplazamiento suave al hacer clic en enlaces del nav
+document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', function (e) {
+        // Evita el salto inmediato
+        e.preventDefault();
+
+        // Obtiene el ID del destino desde el href
+        const targetId = this.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
+
+        // Si existe el destino, aplica el scroll suave
+        if (targetElement) {
+            targetElement.scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+    });
+});
 
 // Precargar imágenes para mejor rendimiento
 const preloadImages = () => {

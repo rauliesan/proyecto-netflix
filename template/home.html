@@ -13,11 +13,12 @@
             <img src="../static/images/logo.png" alt="Logo Netflix">
         </div>
         <ul class="nav-links">
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#">Series</a></li>
-            <li><a href="#">Películas</a></li>
-            <li><a href="#">Novedades populares</a></li>
-            <li><a href="#">Mi lista</a></li>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#tendencia">Tendencias ahora</a></li>
+            <li><a href="#accion">Peliculas de acción</a></li>
+            <li><a href="#comedia">Comedias</a></li>
+            <li><a href="#dramatica">Series dramáticas</a></li>
+            <li><a href="#terror">Terror</a></li>
         </ul>
         <div class="user-profile">
             <div class="profile-img"></div>
@@ -25,7 +26,7 @@
     </nav>
 
     <!-- Header con película destacada -->
-    <header>
+    <header id="inicio">
         <div class="header-content">
             <h1>Stranger Things</h1>
             <p>Cuando un niño desaparece, su madre, un jefe de policía y sus amigos deben enfrentar fuerzas terroríficas para recuperarlo.</p>
@@ -37,7 +38,7 @@
     </header>
 
     <!-- Secciones de películas por categoría -->
-    <section class="movies-section">
+    <section class="movies-section" id="tendencia">
         <!-- Tendencias -->
         <div class="movies-row">
             <h2 class="category-title">Tendencias ahora</h2>
@@ -76,7 +77,7 @@
         </div>
 
         <!-- Películas de acción -->
-        <div class="movies-row">
+        <div class="movies-row" id="accion">
             <h2 class="category-title">Películas de acción</h2>
             <div class="movies-container">
                 <div class="movie-item">
@@ -113,7 +114,7 @@
         </div>
 
         <!-- Comedias -->
-        <div class="movies-row">
+        <div class="movies-row" id="comedia">
             <h2 class="category-title">Comedias</h2>
             <div class="movies-container">
                 <div class="movie-item">
@@ -150,7 +151,7 @@
         </div>
 
         <!-- Series dramáticas -->
-        <div class="movies-row">
+        <div class="movies-row" id="dramatica">
             <h2 class="category-title">Series dramáticas</h2>
             <div class="movies-container">
                 <div class="movie-item">
@@ -187,7 +188,7 @@
         </div>
 
         <!-- Terror -->
-        <div class="movies-row">
+        <div class="movies-row" id="terror">
             <h2 class="category-title">Terror</h2>
             <div class="movies-container">
                 <div class="movie-item">
