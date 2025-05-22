@@ -19,5 +19,7 @@ Este proyecto es un clon básico de Netflix, desarrollado con tecnologías front
 ## Instalar dependencias
 pip install -r requirements.txt
 
+Importar el archivo netflix.sql en phpmyadmin
+
 ## Ejecutar el servidor 
 python -m uvicorn app.main:app --reload
