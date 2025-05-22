@@ -10,185 +10,6 @@ body {
     background-color: black;
 }
 
-/* Estilos del header */
-header {
-    background-image: url("static/images/background.jpg");
-    background-size: cover;
-    height: 500px;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 20px;
-}
-
-#logo {
-    margin-top: 1%;
-    width: 15%;
-    position: absolute;
-    top: 1%;
-    left: 1%;
-}
-
-#iniciarSesion {
-    margin: 10px 0;
-    background-color: #e50914;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-    position: absolute;
-    top: 1%;
-    right: 1%;
-    width: auto;
-    padding: 10px 20px;
-    z-index: 1;
-}
-
-#registrarse {
-    margin: 10px 0;
-    background-color: #e50914;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-    position: absolute;
-    top: 1%;
-    right: 10%;
-    width: auto;
-    padding: 10px 20px;
-    z-index: 1;
-}
-
-#logo {
-    margin-top: 1%;
-    width: 15%;
-    position: absolute;
-    top: 1%;
-    left: 1%;
-}
-
-#iniciarSesion {
-    margin: 10px 0;
-    background-color: #e50914;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-    position: absolute;
-    top: 1%;
-    right: 1%;
-    width: auto;
-    padding: 10px 20px;
-    z-index: 1;
-}
-
-#registrarse {
-    margin: 10px 0;
-    background-color: #e50914;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-    position: absolute;
-    top: 1%;
-    right: 10%;
-    width: auto;
-    padding: 10px 20px;
-    z-index: 1;
-}
-
-.header-content {
-    background-color: rgba(20, 20, 20, 0.6);
-    padding: 40px;
-    border-radius: 10px;
-    backdrop-filter: blur(2px);
-}
-
-.header-content > h1 {
-    font-size: 3em;
-    font-weight: bold;
-    margin-bottom: 20px;
-}
-
-.header-content > p {
-    font-size: 1.2em;
-    max-width: 800px;
-    line-height: 1.5;
-    margin-bottom: 30px;
-}
-
-/* Estilo de los inputs */
-input {
-    padding: 12px 15px;
-    margin: 10px 0;
-    width: auto;
-    border: 1px solid #333;
-    border-radius: 5px;
-    background-color: #333;
-    color: white;
-    font-size: 16px;
-}
-
-input:focus {
-    border-color: #e50914;
-    outline: none;
-}
-
-button {
-    padding: 12px 20px;
-    margin: 10px 0 0 10px;
-    width: auto;
-    background-color: #e50914;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-    transition: transform 0.2s ease;
-}
-
-button:hover {
-    transform: scale(1.05);
-}
-
-button:active {
-    transform: scale(0.95);
-}
-.play-button {
-    padding: 15px 30px;
-    background-color: white;
-    color: black;
-    border: none;
-    border-radius: 5px;
-    font-size: 18px;
-    font-weight: bold;
-    cursor: pointer;
-    margin-right: 15px;
-    transition: transform 0.2s ease;
-}
-
-.info-button {
-    padding: 15px 30px;
-    background-color: rgba(109, 109, 110, 0.7);
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 18px;
-    cursor: pointer;
-    transition: transform 0.2s ease;
-}
-
-.play-button:hover, .info-button:hover {
-    transform: scale(1.05);
-}
-
 /* Estilos de navegación */
 nav {
     position: fixed;
@@ -202,20 +23,23 @@ nav {
     align-items: center;
 }
 
+/* Logo de Netflix - Reemplazando el div de texto */
 .nav-logo {
-    height: 40px;
-    width: auto;
-    transition: transform 0.3s ease;
+    height: 40px; /* Altura fija para el logo */
 }
 
-.nav-logo:hover {
-    transform: scale(1.05);
+.nav-logo img {
+    height: 100%;
+    width: auto;
+    object-fit: contain;
 }
 
 .nav-links {
     display: flex;
     gap: 30px;
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 .nav-links a {
@@ -241,17 +65,92 @@ nav {
     background-color: #e50914;
 }
 
-/* Galería de películas (reemplaza al carrusel) */
-.movies-gallery {
-    padding: 50px 20px;
-    background-color: #141414;
+/* Estilos del header */
+header {
+    background-image: url("https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80");
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+    padding: 0 50px;
+    background-attachment: fixed;
 }
 
-.gallery-title {
-    text-align: center;
-    font-size: 2em;
-    margin-bottom: 40px;
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to right, rgba(0,0,0,0.8), transparent 60%);
+}
+
+.header-content {
+    position: relative;
+    z-index: 2;
+    max-width: 500px;
+    padding: 40px 0;
+}
+
+.header-content > h1 {
+    font-size: 3em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+}
+
+.header-content > p {
+    font-size: 1.2em;
+    line-height: 1.5;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+}
+
+/* Botón de reproducir principal */
+.play-button {
+    padding: 15px 30px;
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-right: 15px;
+    transition: all 0.2s ease;
+}
+
+.info-button {
+    padding: 15px 30px;
+    background-color: rgba(109, 109, 110, 0.7);
     color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.play-button:hover {
+    transform: scale(1.05);
+    background-color: rgba(255,255,255,0.8);
+}
+
+.info-button:hover {
+    transform: scale(1.05);
+    background-color: rgba(109, 109, 110, 0.9);
+}
+
+/* Galería de películas por categorías */
+.movies-section {
+    padding: 50px 10vw;
+    background-color: #141414;
 }
 
 .category-title {
@@ -266,15 +165,22 @@ nav {
 }
 
 .movies-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    justify-content:center;
+}
+
+.movies-container::-webkit-scrollbar {
+    display: none;
 }
 
 .movie-item {
     position: relative;
+    min-width: 200px;
     height: 300px;
     border-radius: 4px;
     overflow: hidden;
@@ -362,8 +268,26 @@ footer {
 
 /* Responsive */
 @media (max-width: 768px) {
-    .movies-container {
-        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    nav {
+        padding: 15px 20px;
+    }
+    
+    .nav-logo {
+        height: 30px;
+    }
+    
+    .movies-section {
+        padding: 30px 20px;
+    }
+    
+    .movie-item {
+        min-width: 150px;
+        height: 225px;
+    }
+    
+    .header-content {
+        padding: 20px 0;
+        max-width: 90%;
     }
     
     .header-content > h1 {
@@ -374,24 +298,11 @@ footer {
         font-size: 1em;
     }
     
-    #logo {
-        width: 30%;
-    }
-    
-    .benefits-container {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    nav {
-        padding: 15px 20px;
-    }
-    
     .nav-links {
         display: none;
     }
     
-    .nav-logo {
-        height: 30px;
+    header {
+        padding: 0 20px;
     }
 }
